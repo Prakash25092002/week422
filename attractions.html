@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer's Hub - Attractions</title>
+    <link rel="stylesheet" href="attractions.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="logo">Explorer's Hub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Featured Attractions Section -->
+    <section class="featured-attractions">
+        <h2>Featured Attractions</h2>
+        <div class="attraction-grid">
+            <!-- Eiffel Tower -->
+            <div class="attraction-item">
+                <img src="effil.jpg" alt="Eiffel Tower">
+                <h3>Eiffel Tower</h3>
+                <p>Experience the beauty of Paris from the iconic Eiffel Tower.</p>
+                <button onclick="openPopover('eiffel-tips')">localTips</button>
+                <button onclick="openPopover('eiffel-visitor')">Visitor Details</button>
+                <div id="eiffel-tips" class="popover">
+                    <div class="popover-content">
+                        <span class="close-btn" onclick="closePopover('eiffel-tips')">&times;</span>
+                        <h4>Local Tips for Eiffel Tower</h4>
+                        <p>Best time to visit: Early morning or late evening to avoid crowds.</p>
+                        <p>Nearby attractions: Louvre Museum, Seine River.</p>
+                        <h5>Local Food</h5>
+                        <p>Try the classic French croissants and escargot, or indulge in a French onion soup.</p>
+                        <h5>Transport</h5>
+                        <p>The Paris Metro is the most convenient way to get to the Eiffel Tower. The nearest station is Trocadéro.</p>
+                        <h5>Cultural Tips</h5>
+                        <p>Be polite and greet with a "Bonjour" before speaking in English. French culture values good manners and respect for traditions.</p>
+                    </div>
+                </div>
+                <div id="eiffel-visitor" class="popover">
+                    <div class="popover-content">
+                        <span class="close-btn" onclick="closePopover('eiffel-visitor')">&times;</span>
+                        <h4>Visitor Details for Eiffel Tower</h4>
+                        <p>Entry fee: €25 (Adults), €12 (Children).</p>
+                        <p>Opening hours: 9 AM - 12 AM daily.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taj Mahal -->
+            <div class="attraction-item">
+                <img src="taj.jpeg" alt="Taj Mahal">
+                <h3>Taj Mahal</h3>
+                <p>A symbol of love and India's rich history.</p>
+                <button onclick="openPopover('taj-tips')">local Tips</button>
+                <button onclick="openPopover('taj-visitor')">Visitor Details</button>
+                <div id="taj-tips" class="popover">
+                    <div class="popover-content">
+                        <span class="close-btn" onclick="closePopover('taj-tips')">&times;</span>
+                        <h4>Local Tips for Taj Mahal</h4>
+                        <p>Best time to visit: Early morning for a serene experience.</p>
+                        <p>Nearby attractions: Agra Fort, Mehtab Bagh.</p>
+                        <h5>Local Food</h5>
+                        <p>Try the famous Mughlai dishes like kebabs and biryanis. Don’t miss the Agra Petha, a sweet treat.</p>
+                        <h5>Transport</h5>
+                        <p>Agra is well connected by trains and buses. Hire a rickshaw or taxi to reach the Taj Mahal from the station.</p>
+                        <h5>Cultural Tips</h5>
+                        <p>Dress modestly when visiting religious sites. It's customary to remove your shoes before entering the Taj Mahal.</p>
+                    </div>
+                </div>
+                <div id="taj-visitor" class="popover">
+                    <div class="popover-content">
+                        <span class="close-btn" onclick="closePopover('taj-visitor')">&times;</span>
+                        <h4>Visitor Details for Taj Mahal</h4>
+                        <p>Entry fee: ₹50 (Indians), ₹1300 (Foreigners).</p>
+                        <p>Opening hours: 6 AM - 7 PM daily.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Great Wall of China -->
+            <div class="attraction-item">
+                <img src="china.jpeg" alt="Great Wall of China">
+                <h3>Great Wall of China</h3>
+                <p>A marvel of ancient architecture.</p>
+                <button onclick="openPopover('china-tips')">local Tips</button>
+                <button onclick="openPopover('china-visitor')">Visitor Details</button>
+                <div id="china-tips" class="popover">
+                    <div class="popover-content">
+                        <span class="close-btn" onclick="closePopover('china-tips')">&times;</span>
+                        <h4>Local Tips for Great Wall of China</h4>
+                        <p>Best time to visit: Spring and autumn for pleasant weather.</p>
+                        <p>Nearby attractions: Ming Tombs, Summer Palace.</p>
+                        <h5>Local Food</h5>
+                        <p>Try Peking Duck, Dim Sum, and the famous Chinese dumplings when visiting Beijing.</p>
+                        <h5>Transport</h5>
+                        <p>The Great Wall can be accessed from Beijing by bus or train. You can also hire a private car or take a guided tour.</p>
+                        <h5>Cultural Tips</h5>
+                        <p>When in China, use both hands to offer or receive something from someone, as it is seen as a sign of respect.</p>
+                    </div>
+                </div>
+                <div id="china-visitor" class="popover">
+                    <div class="popover-content">
+                        <span class="close-btn" onclick="closePopover('china-visitor')">&times;</span>
+                        <h4>Visitor Details for Great Wall of China</h4>
+                        <p>Entry fee: ¥40-¥60 (Varies by section).</p>
+                        <p>Opening hours: 8 AM - 6 PM daily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Explorer's Hub. All Rights Reserved to Mousam.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+       
+        function openPopover(popoverId) {
+            const popover = document.getElementById(popoverId);
+
+            
+            const allPopovers = document.querySelectorAll('.popover');
+            allPopovers.forEach(function(pop) {
+                pop.style.display = 'none';
+            });
+
+            popover.style.display = 'block';
+
+          
+            setTimeout(function() {
+                closePopover(popoverId);
+            }, 5000); 
+        }
+
+        
+        function closePopover(popoverId) {
+            const popover = document.getElementById(popoverId);
+            popover.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

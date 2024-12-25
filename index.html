@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer's Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .more-info {
+            display: none;
+            margin-top: 10px;
+        }
+        .btn-view-more {
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-view-more:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="logo">Explorer's Hub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <header class="hero">
+        <div class="slideshow">
+            <div class="slide" style="background-image: url('effilbackground.jpg');"></div>
+            <div class="slide" style="background-image: url('great_wall.jpeg');"></div>
+            <div class="slide" style="background-image: url('taj_background.jpg');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to Explorer's Hub</h1>
+            <p>Your ultimate guide to discovering the world's most stunning destinations.</p>
+            <a href="attractions.html" class="btn">Explore Attractions</a>
+        </div>
+    </header>
+
+    <!-- Featured Attractions Section -->
+    <section class="featured-attractions">
+        <h2>Featured Attractions</h2>
+        <div class="attraction-grid">
+            <!-- Eiffel Tower -->
+            <div class="attraction-item">
+                <img src="effil.jpg" alt="Eiffel Tower">
+                <h3>Eiffel Tower</h3>
+                <p>Located in Paris, the Eiffel Tower is one of the most iconic landmarks in the world. Known for its stunning architectural design and breathtaking views of the city, it is a must-see attraction for any traveler.</p>
+                <button class="btn-view-more" onclick="toggleMoreInfo('eiffel-more')">View More</button>
+                <div id="eiffel-more" class="more-info">
+                    <p>The Eiffel Tower, built in 1889, stands 324 meters tall and offers a 360-degree view of Paris. Visitors can take an elevator or climb the stairs to reach the observation decks.</p>
+                    <p>It is one of the most visited paid monuments in the world, with more than 7 million visitors annually.</p>
+                </div>
+            </div>
+
+            <!-- Taj Mahal -->
+            <div class="attraction-item">
+                <img src="taj.jpeg" alt="Taj Mahal">
+                <h3>Taj Mahal</h3>
+                <p>A symbol of love and a masterpiece of Mughal architecture, the Taj Mahal is located in Agra, India. This white marble mausoleum is a UNESCO World Heritage Site and attracts millions of visitors every year.</p>
+                <button class="btn-view-more" onclick="toggleMoreInfo('taj-more')">View More</button>
+                <div id="taj-more" class="more-info">
+                    <p>Completed in 1653, the Taj Mahal is considered the jewel of Muslim art in India. It is known for its intricate carvings, beautiful gardens, and reflection pool that adds to its elegance.</p>
+                    <p>It is best visited in the early morning to avoid crowds, and visitors can enjoy the sight of the monument bathed in the warm glow of the sunrise.</p>
+                </div>
+            </div>
+
+            <!-- Great Wall of China -->
+            <div class="attraction-item">
+                <img src="china.jpeg" alt="Great Wall of China">
+                <h3>Great Wall of China</h3>
+                <p>One of the greatest man-made structures, the Great Wall of China stretches over 13,000 miles. It was originally built to protect China from invasions, and today it offers stunning views and an opportunity to experience ancient history.</p>
+                <button class="btn-view-more" onclick="toggleMoreInfo('china-more')">View More</button>
+                <div id="china-more" class="more-info">
+                    <p>Construction of the Great Wall started in the 7th century BC and continued until the 17th century. The wall offers magnificent panoramic views of the surrounding landscapes and attracts thousands of hikers and tourists every year.</p>
+                    <p>Visitors can explore sections of the wall, like Badaling and Mutianyu, where the wall has been well-preserved and is easily accessible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Explorer's Hub. All Rights Reserved to Mousam.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle additional information visibility
+        function toggleMoreInfo(attractionId) {
+            var moreInfo = document.getElementById(attractionId);
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

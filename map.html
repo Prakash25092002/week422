@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer's Hub - Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        .info-window-content img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="logo">Explorer's Hub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Map Section -->
+    <section id="map-section">
+        <h2>Explore Locations on the Map</h2>
+        <div id="map"></div> 
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Explorer's Hub. All Rights Reserved to Mousam.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYzC11wRxulWFUjTv0yxSF9wB111-qFA&callback=initMap" async defer></script>
+    
+    <script>
+      
+        function initMap() {
+          
+            const centerLocation = { lat: 20.5937, lng: 78.9629 };  
+
+           
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 3,
+                center: centerLocation,
+            });
+
+          
+            const eiffelTower = { lat: 48.8584, lng: 2.2945 };
+            const marker1 = new google.maps.Marker({
+                position: eiffelTower,
+                map: map,
+                title: "Eiffel Tower, Paris"
+            });
+
+           
+            const tajMahal = { lat: 27.1751, lng: 78.0421 };
+            const marker2 = new google.maps.Marker({
+                position: tajMahal,
+                map: map,
+                title: "Taj Mahal, Agra"
+            });
+
+           
+            const greatWall = { lat: 40.4319, lng: 116.5704 };
+            const marker3 = new google.maps.Marker({
+                position: greatWall,
+                map: map,
+                title: "Great Wall of China, Beijing"
+            });
+
+            
+            const infoWindow1 = new google.maps.InfoWindow({
+                content: `
+                    <div class="info-window-content">
+                        <h3>Eiffel Tower</h3>
+                        <img src="effil.jpg" alt="Eiffel Tower">
+                        <p>The Eiffel Tower is one of the most recognizable structures in the world, located in Paris, France. It was completed in 1889 as the entrance arch for the 1889 World's Fair and stands at 330 meters tall.</p>
+                    </div>`
+            });
+            marker1.addListener('click', function() {
+                infoWindow1.open(map, marker1);
+            });
+
+           
+            const infoWindow2 = new google.maps.InfoWindow({
+                content: `
+                    <div class="info-window-content">
+                        <h3>Taj Mahal</h3>
+                        <img src="taj.jpeg" alt="Taj Mahal">
+                        <p>The Taj Mahal is an iconic symbol of love, located in Agra, India. It was built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal. It is a UNESCO World Heritage site.</p>
+                    </div>`
+            });
+            marker2.addListener('click', function() {
+                infoWindow2.open(map, marker2);
+            });
+
+            
+            const infoWindow3 = new google.maps.InfoWindow({
+                content: `
+                    <div class="info-window-content">
+                        <h3>Great Wall of China</h3>
+                        <img src="china.jpeg" alt="Great Wall of China">
+                        <p>The Great Wall of China is a series of fortifications that were built along the northern borders of China. It stretches over 21,000 kilometers and was built to protect China from invasions.</p>
+                    </div>`
+            });
+            marker3.addListener('click', function() {
+                infoWindow3.open(map, marker3);
+            });
+        }
+    </script>
+</body>
+</html>
